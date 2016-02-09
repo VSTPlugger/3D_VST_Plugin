@@ -1,8 +1,8 @@
 # Instruction
 
 
-  - Get OpenAL https://www.openal.org/downloads/
-  - Get latest version of SOX [Already done in this repository] 
+- Get OpenAL https://www.openal.org/downloads/
+- Get latest version of SOX [Already done in this repository] 
     ```sh
     $  git clone git://git.code.sf.net/p/sox/code sox
     ```
