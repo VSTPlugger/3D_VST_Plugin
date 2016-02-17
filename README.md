@@ -21,6 +21,8 @@
 	   	```
 	    $ gcc -framework OpenAL -framework Cocoa -o footsteps footsteps.c (Mac?)
 	   - or 
+	    ```
+	    ```
 	    $ gcc -o footsteps footsteps.c -lopenal (Windows)
 	    ```
   - Run by typing:

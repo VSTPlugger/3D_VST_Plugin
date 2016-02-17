@@ -29,7 +29,7 @@
 #endif
 
 
-
+#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>  /* for usleep() */
@@ -70,9 +70,55 @@ void randWalk( float *a ){
 }
 
 int main( int argc, char *argv[] ){
+   printf("Welcome!You will be ask to input the following: \n");
+            printf("Name of Source file with .raw extension \n");
+            printf("Staring points \n");
+            printf("Ending points \n");
+   printf("This program will walk from target to end point you specified first, and then walk randomly around forever there after\n" );
+   
+   char soundFile[100];
+   char temp[100];
+   //scanf("%s",&temp);
+   printf("Please input the name of the soundFile You wish to load\n" );
+   //fgets(temp, sizeof(temp),stdin );
+   scanf("%s",&temp);
+   strncpy(soundFile,temp,100);
+   printf("You've entered:%s \n", soundFile);
+
+   printf("Please input the Starting point(x,y,z) \n Please press enter after every input \n" );
+   //printf(" \n" );
+
    /* current position and where to walk to... start just 1m ahead */
-   float curr[3] = {0.,0.,-1.};
-   float targ[3] = {0.,0.,-1.};
+   float x;
+   float y;
+   float z;
+
+   scanf("%f",&x);
+   scanf("%f",&y);
+   scanf("%f",&z);
+
+   float curr[3]; //= {0.,0.,-1.};
+   curr[0] = x;
+   curr[1] = y;
+   curr[2] = z;
+
+   printf("You starting point is: %.1f,%.1f,%.1f\n",curr[0],curr[1],curr[2]);
+   float targ[3]; // = {0.,0.,-1.};
+
+   printf("Please input the ending point(i,j,k)\n Please press enter after every input \n" );
+   //printf("Please press enter after every input \n" );
+   float i;
+   float j;
+   float k;
+
+   scanf("%f",&i);
+   scanf("%f",&j);
+   scanf("%f",&k);
+
+   targ[0] = i;
+   targ[1] = j;
+   targ[2] = k;
+   printf("Your end point is: %.1f,%.1f,%.1f\n",targ[0],targ[1],targ[2]);
 
    /* initialize OpenAL context, asking for 44.1kHz to match HRIR data */
    ALCint contextAttr[] = {ALC_FREQUENCY,44100,0};
@@ -100,7 +146,7 @@ int main( int argc, char *argv[] ){
    alGenBuffers( 1, &buffer );
    {
       long dataSize;
-      const ALvoid* data = load( "footsteps.raw", &dataSize );
+      const ALvoid* data = load(soundFile, &dataSize );
       /* for simplicity, assume raw file is signed-16b at 44.1kHz */
       alBufferData( buffer, AL_FORMAT_MONO16, data, dataSize, 44100 );
       free( (void*)data );
