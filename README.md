@@ -3,7 +3,7 @@
 - 1)Get OpenAL https://www.openal.org/downloads/
 - 2)Get latest version of SOX
 	- git clone https://github.com/Distrotech/sox
-	        ###### or 
+	- or 
     - brew install sox 
 - 3)Install SOX
   	- http://sourceforge.net/projects/sox/files/sox/
@@ -12,7 +12,7 @@
 	- sox footsteps-4.wav -b 16 footsteps.raw channels 1 rate 44100
 - 6) Compile with:
 	- gcc -framework OpenAL -framework Cocoa -o footsteps footsteps.c (Mac?) 
-	        ##### or 
+	- or 
     - gcc -o footsteps footsteps.c -lopenal (Windows)
 - 7) Run by typing:
     	- ./footsteps
