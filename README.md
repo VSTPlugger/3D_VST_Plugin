@@ -1,5 +1,8 @@
 # Instructions
 
+
+#### You can read this file formatted here: https://github.com/VSTPlugger/3D_VST_Plugin 
+
 - 1)Get OpenAL https://www.openal.org/downloads/
 - 2)Get latest version of SOX
 	- git clone https://github.com/Distrotech/sox
@@ -15,7 +18,9 @@
 	- or 
     - gcc -o footsteps footsteps.c -lopenal (Windows)
 - 7) Run by typing:
-    	- ./footsteps
+    - ./footsteps
+- Notes: 
+	- The original user survey responses can be find in the .csv file in iteration1 folder
 
 ### Program expected inputs 
 - Input file String example: "footsteps.raw"
