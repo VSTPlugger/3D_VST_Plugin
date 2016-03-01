@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2012
+Project("{C8137830-4ACF-3954-811A-EC7F5CAFA4F2}") = "3DAudioVST", "3DAudioVST.vcxproj", "{A413A724-8E90-B8E4-DA29-5CED6A4BF841}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A413A724-8E90-B8E4-DA29-5CED6A4BF841}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A413A724-8E90-B8E4-DA29-5CED6A4BF841}.Debug|Win32.Build.0 = Debug|Win32
+		{A413A724-8E90-B8E4-DA29-5CED6A4BF841}.Release|Win32.ActiveCfg = Release|Win32
+		{A413A724-8E90-B8E4-DA29-5CED6A4BF841}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

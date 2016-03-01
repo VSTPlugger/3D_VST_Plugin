@@ -3,28 +3,18 @@
 
 #### You can read this file formatted here: https://github.com/VSTPlugger/3D_VST_Plugin 
 
-- 1)Get OpenAL https://www.openal.org/downloads/
-- 2)Get latest version of SOX
-	- git clone https://github.com/Distrotech/sox
-	- or 
-    - brew install sox 
-- 3)Install SOX
-  	- http://sourceforge.net/projects/sox/files/sox/
-- 4)Put Sox and OpenAL on your Environment PATH (Windows)
-- 5)Convert sound file from wav to raw 
-	- sox footsteps-4.wav -b 16 footsteps.raw channels 1 rate 44100
-- 6) Compile with:
-	- gcc -framework OpenAL -framework Cocoa -o footsteps footsteps.c (Mac?) 
-	- or 
-    - gcc -o footsteps footsteps.c -lopenal (Windows)
-- 7) Run by typing:
-    - ./footsteps
-- Notes: 
-	- The original user survey responses can be find in the .csv file in iteration1 folder
+- 1)Please clone this repository to your [Desktop]. All path is preconfigured that way.
+- 2)This Repository contains:
+	- JUCE Framework codes [juce-grapefruit-osx]
+	- Project Specific Codes [3DAudioVST]
+    - Audio Plugin Host provided by JUCE for testing [Audio Plugin Host]. 
+- 3)To Test for the functionality of our VST: 
+  	- Navigate into [audio plugin host]->[Builds]->[Select Your IDE]->[Run/Compile respecitively]
+    - Press "Cmd-P" (or going to Options > Edit) to search for the list of available plug-in on the system
+    - If the list is empty, [Opions]->[Scan for new or updated VST Plugins]
+    - Go back to GUI, Right click and select [VSTPlugger]->[3DAudioVST].
+    - Connect nodes to input & outputs respectively. 
+    - Double click on [3DAudioVST] to view the VST GUI for sound Manipulation
 
-### Program expected inputs 
-- Input file String example: "footsteps.raw"
-- Begin Point float examople: 0 [Enter] 0 [Enter] 0 [Enter] 
-- End Point float examople: 1 [Enter] 1 [Enter] 1 [Enter] 
-
-#### The program will walk from user [Begin]->[End] point and then walk to other locations randomly from then on.  
+### Our Project Source Code Folder: 
+- [3DAudioVST]
