@@ -18,9 +18,62 @@ _3daudioVstAudioProcessorEditor::_3daudioVstAudioProcessorEditor (_3daudioVstAud
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-    setSize (400, 300);
+    
+    setSize (600, 450);
+    
+    
+    // these define the parameters of our midiSlider object
+    midiVolume.setSliderStyle (Slider::LinearBar);
+    midiVolume.setRange(0.0, 100, 1.0);
+    midiVolume.setTextBoxStyle (Slider::NoTextBox, false, 90, 0);
+    midiVolume.setPopupDisplayEnabled (true, this);
+    midiVolume.setTextValueSuffix (" Volume");
+    midiVolume.setValue(1.0);
+    
+    // these define the parameters of our freq Slider
+    freq.setSliderStyle (Slider::Rotary);
+    freq.setRange(0.0, 100, 1.0);
+    freq.setTextBoxStyle (Slider::NoTextBox, false, 90, 0);
+    freq.setPopupDisplayEnabled (true, this);
+    freq.setTextValueSuffix (" Frequency");
+    freq.setValue(1.0);
+    
+    // these define the parameters of our phase Slider
+    phase.setSliderStyle (Slider::Rotary);
+    phase.setRange(0.0, 100, 1.0);
+    phase.setTextBoxStyle (Slider::NoTextBox, false, 90, 0);
+    phase.setPopupDisplayEnabled (true, this);
+    phase.setTextValueSuffix (" Phase");
+    phase.setValue(1.0);
+    
+    // these define the parameters of our time Slider
+    time.setSliderStyle (Slider::Rotary);
+    time.setRange(0.0, 100, 1.0);
+    time.setTextBoxStyle (Slider::NoTextBox, false, 90, 0);
+    time.setPopupDisplayEnabled (true, this);
+    time.setTextValueSuffix ("Time");
+    time.setValue(1.0);
+    // these define the parameters of our filter Slider
+    filter.setSliderStyle (Slider::Rotary);
+    filter.setRange(0.0, 100, 1.0);
+    filter.setTextBoxStyle (Slider::NoTextBox, false, 90, 0);
+    filter.setPopupDisplayEnabled (true, this);
+    filter.setTextValueSuffix (" Filter 1");
+    filter.setValue(1.0);
+
+    
+    
+    //make GUI objects visible
+    addAndMakeVisible(&midiVolume);
+    addAndMakeVisible(&freq);
+    addAndMakeVisible(&phase);
+    addAndMakeVisible(&time);
+    addAndMakeVisible(&filter);
+
 }
 
+
+//Destructor, memory recycliing
 _3daudioVstAudioProcessorEditor::~_3daudioVstAudioProcessorEditor()
 {
 }
@@ -28,15 +81,27 @@ _3daudioVstAudioProcessorEditor::~_3daudioVstAudioProcessorEditor()
 //==============================================================================
 void _3daudioVstAudioProcessorEditor::paint (Graphics& g)
 {
+    
+    //fill the whole window white
     g.fillAll (Colours::white);
-
+    
+    //set "paint color" to black
     g.setColour (Colours::black);
     g.setFont (15.0f);
-    g.drawFittedText ("Hello World!", getLocalBounds(), Justification::centred, 1);
+    g.drawFittedText ("3D VST Plugin!", 0, 0, getWidth(), 30, Justification::centred, 1);
 }
 
+//==============================================================================
+//this method is called everytime a user resuze the GUI window
 void _3daudioVstAudioProcessorEditor::resized()
 {
     // This is generally where you'll want to lay out the positions of any
     // subcomponents in your editor..
+    
+    // sets the position and size of the slider with arguments (x, y, width, height)
+    midiVolume.setBounds (getWidth()/2, getHeight()-60, (getWidth() - 60)/2, 40);
+    freq.setBounds (getWidth()/2, getHeight()/4,60, 60);
+    phase.setBounds (getWidth()/2 + 80, getHeight()/4, 60, 60);
+    time.setBounds (getWidth()/2 + 160, getHeight()/4, 60, 60);
+    filter.setBounds (getWidth()/2 + 240, getHeight()/4, 60, 60);
 }

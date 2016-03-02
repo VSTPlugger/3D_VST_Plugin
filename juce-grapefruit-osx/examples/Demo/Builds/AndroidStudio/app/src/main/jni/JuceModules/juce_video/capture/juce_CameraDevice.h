@@ -1,0 +1,1 @@
+/Users/admin/Desktop/3D_VST_Plugin/juce-grapefruit-osx/modules/juce_video/capture/juce_CameraDevice.h
