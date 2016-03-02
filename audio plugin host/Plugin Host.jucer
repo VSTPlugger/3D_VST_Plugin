@@ -137,6 +137,52 @@
         <MODULEPATH id="juce_audio_basics" path="../juce-grapefruit-osx/modules"/>
       </MODULEPATHS>
     </VS2015>
+    <CODEBLOCKS_WINDOWS targetFolder="Builds/CodeBlocksWindows" vstFolder="/Users/admin/Desktop/3D_VST_Plugin/juce-grapefruit-osx/VST3 SDK"
+                        vst3Folder="/Users/admin/Desktop/3D_VST_Plugin/juce-grapefruit-osx/VST3 SDK">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="Plugin Host"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="Plugin Host"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_opengl" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_graphics" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_events" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_core" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../juce-grapefruit-osx/modules"/>
+      </MODULEPATHS>
+    </CODEBLOCKS_WINDOWS>
+    <CODEBLOCKS_LINUX targetFolder="Builds/CodeBlocksLinux" vstFolder="/Users/admin/Desktop/3D_VST_Plugin/juce-grapefruit-osx/VST3 SDK"
+                      vst3Folder="/Users/admin/Desktop/3D_VST_Plugin/juce-grapefruit-osx/VST3 SDK">
+      <CONFIGURATIONS>
+        <CONFIGURATION name="Debug" isDebug="1" optimisation="1" targetName="Plugin Host"/>
+        <CONFIGURATION name="Release" isDebug="0" optimisation="3" targetName="Plugin Host"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_video" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_opengl" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_graphics" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_events" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_core" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../juce-grapefruit-osx/modules"/>
+        <MODULEPATH id="juce_audio_basics" path="../juce-grapefruit-osx/modules"/>
+      </MODULEPATHS>
+    </CODEBLOCKS_LINUX>
   </EXPORTFORMATS>
   <MAINGROUP id="YdWL7hi7p" name="Plugin Host">
     <FILE id="8tLeuntR4" name="FilterGraph.cpp" compile="1" resource="0"
