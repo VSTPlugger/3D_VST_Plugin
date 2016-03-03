@@ -14,7 +14,9 @@
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
-
+#include "../../aquila-build/aquila-src/aquila/global.h"
+#include "../../aquila-build/aquila-src/aquila/source/generator/SineGenerator.h"
+#include "../../aquila-build/aquila-src/aquila/tools/TextPlot.h"
 
 //==============================================================================
 /**
@@ -22,6 +24,7 @@
 class _3daudioVstAudioProcessorEditor  : public AudioProcessorEditor
 {
 public:
+    //_3daudioVstAudioProcessorEditor(); //default constructor, just bc
     _3daudioVstAudioProcessorEditor (_3daudioVstAudioProcessor&);
     ~_3daudioVstAudioProcessorEditor();
 
@@ -41,6 +44,10 @@ private:
     Slider phase;
     Slider time;
     Slider filter;
+    
+    //Aquila Stuff
+    //Aquila::SineGenerator sine;
+    
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (_3daudioVstAudioProcessorEditor)
 };

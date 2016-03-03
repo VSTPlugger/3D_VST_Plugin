@@ -12,15 +12,21 @@
 #include "PluginEditor.h"
 
 
+
 //==============================================================================
 _3daudioVstAudioProcessorEditor::_3daudioVstAudioProcessorEditor (_3daudioVstAudioProcessor& p)
-    : AudioProcessorEditor (&p), processor (p)
+    :AudioProcessorEditor (&p), processor (p)//,sine(1000)
 {
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
     
     setSize (600, 450);
-    
+    //sine = *new Aquila::SineGenerator(1000);
+    //Aquila::SineGenerator sine =Aquila::SineGenerator(1000);
+    //sine = Aquila::SineGenerator(1000);
+    //sine.setAmplitude(32).setFrequency(50).generate(64);
+    //Aquila::TextPlot plt("Sine wave example");
+    //plt.plot(sine);
     
     // these define the parameters of our midiSlider object
     midiVolume.setSliderStyle (Slider::LinearBar);
