@@ -122,7 +122,8 @@ class ImageFrame extends JFrame{
 		zSlider.addChangeListener(new ChangeListener(){
 	      	public void stateChanged(ChangeEvent e){
 	        	int tempZ = ((JSlider)e.getSource()).getValue();
-	        	z = tempZ/100.0f;
+	        	z = (float)(-1+ tempZ*(2/100.0f));
+                        //(float)(-1 + (2.0/WIDTH)*(x_)
 				System.out.println("zSlider float val: " + z);
       		}
                 });
@@ -157,10 +158,11 @@ class ImageFrame extends JFrame{
       		}
                 });
             */   
-                pitchSlider = new JSlider(JSlider.HORIZONTAL, 1, 10, 5);
+                pitchSlider = new JSlider(JSlider.HORIZONTAL, 0, 10, 5);
 		pitchSlider.addChangeListener(new ChangeListener(){
 	      	public void stateChanged(ChangeEvent e){
-	        	pitch = (float)((JSlider)e.getSource()).getValue();
+	        	int tempPitch = ((JSlider)e.getSource()).getValue();
+                        pitch = (float)(1.0f + tempPitch/10.0f);
                         sliderChanged = true; 
 			System.out.println("pitchSlider float val: " + pitch);
       		}
